@@ -1,0 +1,12 @@
+main: ml.voltiac.bukkit.MagicSigns.Main
+name: MagicSigns
+version: 0.1
+prefix: MagicSigns
+author: DiamondDeveloper
+commands:
+  MagicSigns:
+    description: Shows publisher info for command.
+    permission: MagicSigns.info
+permissions:
+  MagicSigns.info:
+    default: true

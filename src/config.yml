@@ -1,0 +1,95 @@
+#
+# Thank you for using MagicSigns created by DiamondDeveloper (Me)!
+# If you use this on your server i would LOVE to come see it :P <3
+#
+#
+#
+# Now i have some things to tell you about this plugin and how to use the configuation file, so here i go...
+#                                                                  ----------------                                                    ----------------
+# Example sign configuation:                                       -   [Potato]   -                                                    -  &8[Potato]  -
+#   In this example A sign that looks like this is searched for >  -              - < and when found it will turn the sign into this > -&aClick for a - < (With colors not color codes)
+#   Then when and if the sign is clicked it will give the place a  -              -                                                    - &aFree potato-
+#   potato and send them a message saying they got one. You are    -              -                                                    -              -
+#   able to specify which click does what, but this example does   ----------------                                                    ----------------
+#   not use that
+#
+#   Potato:
+#     permission:
+#        use: 'MagicSigns.use.potato'
+#        create: 'MagicSigns.create.potato'
+#        break: 'MagicSigns.break.potato'
+#     find:
+#     - '[Potato]'
+#     - '%a'
+#     - '%a'
+#     - '%a'
+#     replace:
+#     - '&8[&cPotato&8]'
+#     - '&aClick for a'
+#     - '&afree potato!'
+#     anyclick:
+#     - '[console] give %p potato 1'
+#     - '[message] &cYay!&7 You got a free potato!'
+#     rightclick: []
+#     leftclick: []
+#
+#
+# Commands: 
+#     Here i will show you the commands that you can use in the console and in game. The format is "/command - Permission - Description"
+#
+#     /MagicSigns - MagicSigns.info - It just shows you basic info about the plugin, like my name and the version of the plugin.
+#
+# Place holders:
+#     I just wanted to keep it simple, so the place holders are simple. The format is "placeholder - Description"
+#
+#     Player place holders
+#     %p - Player username, If you put this in the recive section, only the one who created the sign can use it
+#     %d - Player displayname
+#     %h - Player health
+#     %f - Player hunger
+#     %b - Player balance
+#
+#     Sign Place holders:
+#     %1 - Line one of input
+#     %2 - Line two of input
+#     %3 - Line three of input
+#     %4 - Line four of input
+#     %a - Anything, will look for any string
+#
+#     Server Place holders:
+#     %o - Online users
+#     %m - Max users
+#
+#     Bungeecord Place holders:
+#     %_o:<server> - Online users for that server
+#     %_m:<server> - Max users for that server
+#
+# Starters:
+#   These are what you put infront of Find, and any of the click events. They are used to say what an action does in the click events.
+#   if an action does not have a starter, it will be treated with the [message] starter.
+#
+#   Command starters: (Do not put the '/' unless command has one in it such as world edit)
+#   [command] - Makes player run that command
+#   [console] - Runs command as console.
+#   [command*] - Makes player run command as if they had all permissions
+#
+#   Chat starters:
+#   [message] - Sends player a message with color codes (\n can be used for a new line)
+#   [sendRaw] - Sends raw message to player
+#   [sendJSON]  - Sends JSON message to player
+#   [broadcast] - Sends message to whole server with color codes
+#
+#   Formatting starters:
+#   [contains] - Used on find section, it checks if it contains that string (in that order)
+#
+#   Bungeecord starters:
+#   [send] - If using bungeecord, will send player to specifyed server
+#
+# Permissions:
+#   Put none if you dont want there to be a permission, simple as that...
+#
+# Now! go forth and make signs! also send me feedback and suggestions on my plugin. I plan to intagrate with placeholder API, but thats for later.
+#
+Options:
+  prefix: ''
+Signs: []
